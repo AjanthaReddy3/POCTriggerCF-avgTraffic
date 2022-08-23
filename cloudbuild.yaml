@@ -1,0 +1,14 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - avgtraffic_threshold_envvar
+  - --source=.
+  - --trigger-http
+  - --runtime=python37
+  - --allow-unauthenticated
+  - --env-vars-file=env_traffic.yaml
+  - --service-account=kafka-service-account@pg-us-e-app-588206.iam.gserviceaccount.com
+options:
+  logging: CLOUD_LOGGING_ONLY
