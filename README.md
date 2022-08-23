@@ -1,1 +1,0 @@
-# POCTriggerCF-avgTraffic
